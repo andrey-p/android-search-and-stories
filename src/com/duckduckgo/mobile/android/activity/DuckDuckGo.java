@@ -508,6 +508,9 @@ public class DuckDuckGo extends AppCompatActivity {
             // BusProvider.getInstance().post(new WebViewSearchWebTermEvent(query));
             searchOrGoToUrl(query);
         }
+        else if (intent.getStringExtra("bangFromWidget").length() > 0) {
+            getSearchField().addTextWithTrailingSpace(intent.getStringExtra("bangFromWidget"));
+        }
         else if(intent.getBooleanExtra("widget", false)) {
             if(!getSearchField().getText().toString().equals("")) {
                 DDGActionBarManager.getInstance().clearSearchBar();

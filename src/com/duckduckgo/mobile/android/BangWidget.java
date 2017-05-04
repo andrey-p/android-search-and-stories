@@ -24,7 +24,7 @@ public class BangWidget extends AppWidgetProvider {
 
             Intent intent = new Intent(context, DuckDuckGo.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.putExtra("widget", true);
+            intent.putExtra("bangFromWidget", "!bgg");
             PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
             // Get the layout for the App Widget and attach an on-click listener to the button
